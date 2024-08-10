@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 1rem;
     position: fixed;
@@ -20,28 +20,30 @@ header {
     left: 0;
     z-index: 1000;
     display: flex;
-    justify-content: center; /* Center content horizontally */
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between; /* Space out elements horizontally */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Optional: limit max width for better readability */
-    padding: 0 1rem; /* Add padding for small screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: #fff;
 }
 
 nav {
-    display: flex;
-    align-items: center;
+    flex-grow: 1;
 }
 
 nav ul {
@@ -49,7 +51,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 nav ul li {
@@ -59,15 +61,16 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 0.5rem;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background: #555;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ff6f61;
 }
 
 .header-right {
@@ -78,20 +81,21 @@ nav ul li a:hover {
 
 .header-right button,
 .header-right .download-cv {
-    background: #007bff;
+    background: #ff6f61;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 0.9rem;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .header-right button:hover,
 .header-right .download-cv:hover {
-    background: #0056b3;
+    background: #e55d50;
+    transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -112,7 +116,16 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-/* Skills and Projects */
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Skills, Projects, and Education */
 .skills, .projects, .education {
     display: flex;
     flex-wrap: wrap;
@@ -124,27 +137,29 @@ nav ul li a:hover {
 .skill-item, .project-item, .education-item {
     background: rgba(255, 255, 255, 0.9);
     color: #333;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 1rem;
     text-align: center;
     flex: 1 1 calc(33.333% - 2rem); /* 3 items per row with gap */
     max-width: calc(33.333% - 2rem); /* 3 items per row with gap */
     transition: transform 0.3s, box-shadow 0.3s;
     box-sizing: border-box;
+    border: 1px solid #ddd;
 }
 
 .skill-item:hover, .project-item:hover, .education-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .skill-item i, .project-item i, .education-item i {
-    font-size: 3rem;
+    font-size: 4rem;
+    color: #ff6f61;
     margin-bottom: 0.5rem;
 }
 
 .project-item a {
-    color: #007bff;
+    color: #ff6f61;
     text-decoration: none;
     font-weight: bold;
 }
@@ -156,7 +171,7 @@ nav ul li a:hover {
 .contact-content {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
+    border-radius: 15px;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -168,17 +183,18 @@ form {
 
 form label {
     margin: 0.5rem 0;
+    font-weight: bold;
 }
 
 form input, form textarea {
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 form button {
-    background: #007bff;
+    background: #ff6f61;
     color: #fff;
     border: none;
     padding: 0.75rem;
@@ -189,33 +205,56 @@ form button {
 }
 
 form button:hover {
-    background: #0056b3;
+    background: #e55d50;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff6f61;
 }
 
 #backToTop {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: #007bff;
+    background: #ff6f61;
     color: #fff;
     border: none;
     padding: 0.75rem;
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, transform 0.3s;
 }
 
 #backToTop:hover {
-    background: #0056b3;
+    background: #e55d50;
     transform: scale(1.1);
 }
 
@@ -226,7 +265,7 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background: rgba(33, 33, 33, 0.7);
+    background: rgba(33, 33, 33, 0.8);
 }
 
 body.dark-mode nav ul li a {
@@ -241,10 +280,37 @@ body.dark-mode header button:hover {
     background: #666;
 }
 
+body.dark-mode .skill-item, 
+body.dark-mode .project-item, 
+body.dark-mode .education-item {
+    background: rgba(66, 66, 66, 0.8);
+    color: #e0e0e0;
+}
+
 body.dark-mode .skill-item i, 
 body.dark-mode .project-item i, 
 body.dark-mode .education-item i {
     color: #e0e0e0;
+}
+
+body.dark-mode form {
+    background: rgba(66, 66, 66, 0.8);
+}
+
+body.dark-mode form input, 
+body.dark-mode form textarea {
+    background: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode form button {
+    background: #ff6f61;
+    color: #fff;
+}
+
+body.dark-mode form button:hover {
+    background: #e55d50;
 }
 
 /* Responsive Styles */
@@ -269,50 +335,26 @@ body.dark-mode .education-item i {
         margin: 0.5rem 0;
     }
 
-    .header-right {
-        margin-top: 1rem;
+    .hero-content h2 {
+        font-size: 2rem;
     }
 
-    .hero-content {
-        padding: 1rem;
-    }
-
-    .skills, .projects, .education {
-        flex-direction: column;
-    }
-
-    .skill-item, .project-item, .education-item {
-        width: 90%;
-        max-width: none;
+    .hero-content p {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.25rem;
+    .skill-item, .project-item, .education-item {
+        flex: 1 1 100%; /* Full width for small screens */
+        max-width: 100%; /* Full width for small screens */
     }
 
-    nav ul li a {
-        font-size: 0.8rem;
+    .hero-content h2 {
+        font-size: 1.5rem;
     }
 
-    .hero-content {
-        padding: 0.5rem;
-    }
-
-    .skill-item i, .project-item i, .education-item i {
-        font-size: 2rem;
-    }
-
-    .contact-content {
-        padding: 1rem;
-    }
-
-    form input, form textarea {
-        padding: 0.4rem;
-    }
-
-    form button {
+    .hero-content p {
         font-size: 0.9rem;
     }
 }

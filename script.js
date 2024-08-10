@@ -1,21 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const backToTopButton = document.getElementById('backToTop');
-    
-    // Load dark mode preference from local storage
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-        document.body.classList.add('dark-mode');
-    }
-    
+
+    // Toggle dark mode
     darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
-        
-        // Save dark mode preference to local storage
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('dark-mode', 'enabled');
-        } else {
-            localStorage.setItem('dark-mode', 'disabled');
-        }
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        darkModeToggle.innerHTML = isDarkMode
+            ? '<i class="fas fa-sun"></i>'
+            : '<i class="fas fa-moon"></i>';
     });
 
     // Back to top button functionality
@@ -23,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Show/hide back to top button based on scroll position
+    // Show/Hide back to top button
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            backToTopButton.style.display = 'block';
+        if (window.scrollY > 300) {
+            backToTopButton.style.opacity = 1;
         } else {
-            backToTopButton.style.display = 'none';
+            backToTopButton.style.opacity = 0;
         }
     });
 });
