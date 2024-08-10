@@ -19,11 +19,11 @@
                     <li><a href="#education">Education</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="header-actions">
+                    <a href="https://github.com/AttitudePrince143/resume/blob/2603a6b11248aa348c4143011c43bd02fbf1af55/syed%20Adil%20Cv.pdf" target="_blank" id="downloadCV">Download CV</a>
+                    <button id="darkModeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                </div>
             </nav>
-            <div class="header-right">
-                <button id="darkModeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
-                <a href="https://github.com/AttitudePrince143/resume/blob/2603a6b11248aa348c4143011c43bd02fbf1af55/syed%20Adil%20Cv.pdf" class="download-cv" target="_blank" download>Download CV</a>
-            </div>
         </div>
     </header>
 
@@ -31,66 +31,83 @@
         <div class="hero-content">
             <h2>Welcome to My Portfolio</h2>
             <p>I'm Syed Adil Syed Jafar, a passionate front-end developer. Explore my skills and projects.</p>
+           
+                <div id="role">Frontend Developer</div>
+            </div>
+            
         </div>
     </section>
 
-    <section id="skills" class="hero">
-        <div class="hero-content">
+    <section id="skills" class="section">
+        <div class="section-content">
             <h2>Skills</h2>
             <div class="skills">
-                <div class="skill-item">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="skill-item">
                     <i class="fab fa-html5"></i>
                     <h3>HTML5</h3>
-                </div>
-                <div class="skill-item">
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill-item">
                     <i class="fab fa-css3-alt"></i>
                     <h3>CSS3</h3>
-                </div>
-                <div class="skill-item">
+                </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-item">
                     <i class="fab fa-js"></i>
                     <h3>JavaScript</h3>
-                </div>
-                <div class="skill-item">
+                </a>
+                <a href="https://reactjs.org/docs/getting-started.html" target="_blank" class="skill-item">
                     <i class="fab fa-react"></i>
                     <h3>React.js</h3>
-                </div>
-                <div class="skill-item">
+                </a>
+                <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" class="skill-item">
                     <i class="fab fa-bootstrap"></i>
                     <h3>Bootstrap</h3>
-                </div>
-                <div class="skill-item">
+                </a>
+                <a href="https://nodejs.org/en/docs/" target="_blank" class="skill-item">
                     <i class="fab fa-node"></i>
                     <h3>Node.js</h3>
-                </div>
+                </a>
+                <!-- Add more skills as needed -->
             </div>
         </div>
     </section>
 
-    <section id="projects" class="hero">
-        <div class="hero-content">
+    <section id="tools" class="section">
+        <div class="section-content">
+            <h2>Tools</h2>
+            <div class="tools">
+                <a href="https://github.com" target="_blank" class="tool-link">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-content">
             <h2>Projects</h2>
             <div class="projects">
-                <div class="project-item">
+                <div class="project-item tic-tac-toe">
                     <h3>Tic-Tac-Toe Game</h3>
                     <p>A simple Tic-Tac-Toe game built using HTML5, CSS3, and JavaScript.</p>
                     <a href="https://attitudeprince143.github.io/tic-tak-toe-game/" target="_blank">View on GitHub</a>
                 </div>
-                <div class="project-item">
+                <div class="project-item starbucks-clone">
                     <h3>Starbucks Clone</h3>
                     <p>A replica of the Starbucks landing page using HTML, CSS, and JavaScript.</p>
                     <a href="https://attitudeprince143.github.io/starbucks_site/" target="_blank">View on GitHub</a>
                 </div>
-                <div class="project-item">
+                <div class="project-item guess-number">
                     <h3>Guess Right Number Game</h3>
                     <p>A guessing game built with HTML5, CSS3, and JavaScript.</p>
                     <a href="https://github.com/AttitudePrince143/guess-right-number" target="_blank">View on GitHub</a>
                 </div>
-                <div class="project-item">
+                <div class="project-item bmi-calculator">
                     <h3>BMI Calculator</h3>
                     <p>Body mass index calculator with HTML5, CSS3, and JavaScript.</p>
                     <a href="https://attitudeprince143.github.io/Bim-calc/" target="_blank">View on GitHub</a>
                 </div>
-                <div class="project-item">
+                <div class="project-item gym-site">
                     <h3>Simple Gym Site</h3>
                     <p>Simple Gym Site with HTML5, CSS3, and JavaScript.</p>
                     <a href="https://attitudeprince143.github.io/gym_sitee/" target="_blank">View on GitHub</a>
@@ -99,8 +116,8 @@
         </div>
     </section>
 
-    <section id="education" class="hero">
-        <div class="hero-content">
+    <section id="education" class="section">
+        <div class="section-content">
             <h2>Education</h2>
             <div class="education">
                 <div class="education-item">
@@ -119,8 +136,8 @@
         </div>
     </section>
 
-    <section id="contact">
-        <div class="contact-content">
+    <section id="contact" class="section">
+        <div class="section-content">
             <h2>Contact Us</h2>
             <form id="contactForm">
                 <label for="name">Name:</label>
@@ -135,13 +152,7 @@
     </section>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Syed Adil Syed Jafar. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/AttitudePrince143" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/syed-adil-syed-jafar-b85397205" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
+        <p>&copy; 2024 Syed Adil Syed Jafar. All rights reserved.</p>
     </footer>
 
     <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
