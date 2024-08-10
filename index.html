@@ -1,13 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syed Adil</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Adil Syed Jafar Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Syed Adil Syed Jafar</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <button id="darkModeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <a href="C:\Users\Adi_2\OneDrive\syed Adil Cv.pdf" download="Syed_Adil_Syed_Jafar_CV.pdf" class="download-cv">Download CV</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I'm Syed Adil Syed Jafar, a passionate front-end developer. Explore my skills and projects.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="hero">
+        <div class="hero-content">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react"></i>
+                    <h3>React.js</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-bootstrap"></i>
+                    <h3>Bootstrap</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-node"></i>
+                    <h3>Node.js</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="hero">
+        <div class="hero-content">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-item">
+                    <h3>Tic-Tac-Toe Game</h3>
+                    <p>A simple Tic-Tac-Toe game built using HTML5, CSS3, and JavaScript.</p>
+                    <a href="https://attitudeprince143.github.io/tic-tak-toe-game/" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Starbucks Clone</h3>
+                    <p>A replica of the Starbucks landing page using HTML, CSS, and JavaScript.</p>
+                    <a href="https://attitudeprince143.github.io/starbucks_site/" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <h3>Guess Right Number Game</h3>
+                    <p>A guessing game built with HTML5, CSS3, and JavaScript.</p>
+                    <a href="https://github.com/AttitudePrince143/guess-right-number" target="_blank">View on GitHub</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>BMI Calculator</h3>
+                    <p>Body Mass Index calculator with HTML5, CSS3, and JavaScript.</p>
+                    <a href="https://attitudeprince143.github.io/Bim-calc/" target="_blank">View on GitHub</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>Simple Gym Site</h3>
+                    <p>Simple Gym Site with HTML5, CSS3, and JavaScript.</p>
+                    <a href="https://attitudeprince143.github.io/gym_sitee/" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="hero">
+        <div class="hero-content">
+            <h2>Education</h2>
+            <div class="education">
+                <div class="education-item">
+                    <h3>Bachelor of Electrical Engineering</h3>
+                    <p>People's Education Society College of Engineering Aurangabad</p>
+                    <p>7.67 CGPA</p>
+                </div>
+                <div class="education-item">
+                    <h3>Diploma in Electrical Engineering</h3>
+                    <p>People's Education Society Polytechnic College Aurangabad</p>
+                    <p>58%</p>
+                </div>
+                <div class="education-item">
+                    <h3>SSC</h3>
+                    <p>Baba Burhan Urdu High School Khuldabad</p>
+                    <p>71%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Syed Adil Syed Jafar. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
 </html>
