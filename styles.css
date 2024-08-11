@@ -25,7 +25,8 @@ body.dark-mode .header-container {
 }
 
 body.dark-mode .hero-content h2,
-body.dark-mode .hero-content p {
+body.dark-mode .hero-content p,
+body.dark-mode #role {
     color: #f5f5f5;
 }
 
@@ -63,7 +64,7 @@ body.dark-mode #backToTop:hover {
 header {
     background: rgba(0, 0, 0, 0.3); /* Adjust transparency with alpha value */
     color: #fff;
-    padding: 1em 2em;
+    padding: 0.5em 2em; /* Adjust padding for inline layout */
     position: fixed; /* Keep the header fixed at the top */
     width: 100%;
     top: 0;
@@ -74,7 +75,7 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center-align the header content */
+    justify-content: space-between; /* Space between title and navigation */
     max-width: 1200px;
     margin: 0 auto; /* Center the container */
 }
@@ -94,7 +95,6 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 1em;
-    margin-left: 30px;
 }
 
 nav a {
@@ -113,7 +113,6 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 1em;
-    margin-left: 20px;
 }
 
 #darkModeToggle {
@@ -222,7 +221,6 @@ nav a:hover {
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
-
 }
 
 .skill-item, .tool-link, .project-item {
@@ -235,7 +233,6 @@ nav a:hover {
     flex: 1 1 calc(33.333% - 2em); /* Responsive flexbox item */
     max-width: calc(33.333% - 2em);
     text-decoration: none; /* Remove underline */
-
 }
 
 .skill-item:hover, .tool-link:hover, .project-item:hover {
@@ -349,3 +346,45 @@ footer {
     background-color: #0056b3;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+        margin-left: 0;
+    }
+
+    .header-actions {
+        margin-left: 0;
+        margin-top: 1em;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-content #role {
+        font-size: 1.2em;
+    }
+
+    .skill-item, .tool-link, .project-item {
+        flex: 1 1 calc(50% - 2em); /* Adjust for smaller screens */
+        max-width: calc(50% - 2em);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-item, .tool-link, .project-item {
+        flex: 1 1 100%; /* Stack items on top of each other */
+        max-width: 100%;
+    }
+}
