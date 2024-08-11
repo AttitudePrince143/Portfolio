@@ -227,7 +227,7 @@ nav a:hover {
 
 .skill-item, .tool-link, .project-item  {
     background: #fff;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 8px;
     padding: 1em;
     text-align: center;
@@ -235,6 +235,7 @@ nav a:hover {
     flex: 1 1 calc(33.333% - 2em); /* Responsive flexbox item */
     max-width: calc(33.333% - 2em);
     text-decoration: none; /* Remove underline */
+    
 }
 
 .skill-item:hover, .tool-link:hover, .project-item:hover {
@@ -257,9 +258,9 @@ nav a:hover {
     transition: color 0.3s;
 }
 
-.skill-item .icon:hover, .tool-link .icon:hover {
-    color: #0056b3;
-}
+ .skill-item .icon:hover, .tool-link .icon:hover {
+     color: #0056b3; 
+}  
 
 .skill-item h3, .tool-link h3 {
     margin: 0.5em 0;
@@ -279,7 +280,7 @@ nav a:hover {
 /* Education Section Styles */
 .education-item {
     background: #fff;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 8px;
     padding: 1em;
     margin-bottom: 1em;
@@ -289,6 +290,8 @@ nav a:hover {
 .education-item:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 
