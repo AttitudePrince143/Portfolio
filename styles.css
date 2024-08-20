@@ -88,6 +88,9 @@ header {
 nav {
     display: flex;
     align-items: center;
+    
+ margin-right: 89px;
+
 }
 
 nav ul {
@@ -471,14 +474,13 @@ footer {
 
 
 
-@media (min-width:774px) {
-    .header-container-hamburger{
+
+
+
+@media (max-width:490px) {
+    .header-container{
         display: none;
     }
 }
-@media (max-width:774px) {
-    .header-container-hamburger{
-        display: visible;
-    }
-}
+
 
